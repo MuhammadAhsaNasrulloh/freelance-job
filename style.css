@@ -1,0 +1,551 @@
+:root {
+  --primary: #ee1a0a;
+  --bg: #0e201d;
+  --bgnav: #222;
+  --bgmenu: #303030;
+  --color: #eceaeb;
+  --secondary: #81b65b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fbfbfb;
+  min-height: 2200px;
+}
+
+/* Navbar */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+}
+
+.header a {
+  color: var(--color);
+  gap: 10px;
+  margin: 15px;
+}
+
+.header a:hover {
+  color: var(--secondary);
+}
+
+.header a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--secondary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.header a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--bgnav);
+  border-bottom: 1px solid var(--secondary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--secondary);
+}
+
+.navbar .navbar-nav a {
+  color: #f3f3f3;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--secondary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--secondary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-ekstra a {
+  color: #fbfbfb;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-ekstra a:hover {
+  color: var(--secondary);
+}
+
+.navbar .navbar-nav.active {
+  right: 0;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("mario-la-pergola-cn51tm7V0mU-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(60, 96, 101) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4.5em;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.6em;
+  margin-top: 1rem;
+  line-height: 1;
+  color: var(--color);
+  font-weight: 100;
+}
+
+/* About Section */
+.about {
+  padding: 8rem 15% 5rem;
+  /* ini poto background nya bisa di ganti jadi apa aja */
+  background-image: url(BG\ About.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 0rem;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: luminosity;
+  /* ini layout text nya terserah aa mau center mau left terserah */
+  text-align: justify;
+  max-width: 30rem;
+  margin: auto;
+  line-height: 1.6;
+}
+/* Destinasi Wisata */
+
+.destination1 {
+  padding: 8rem 15% 5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(mario-la-pergola-cn51tm7V0mU-unsplash.jpg);
+}
+
+.destination1 h2 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+}
+
+.destination1 .row {
+  display: flex;
+}
+
+.destination1 h2 span {
+  color: var(--primary);
+  margin: 10.5px;
+}
+
+.destination1 .row .content {
+  flex: 1 1 33rem;
+  padding: 0 1rem;
+}
+
+.destination1 .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0rem;
+  text-align: left;
+}
+
+.destination1 .row .content p {
+  font-size: large;
+}
+.destination2 {
+  padding: 8rem 15% 5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(heru-haryanto-9uJbHTrhe8U-unsplash.jpg);
+  mix-blend-mode: difference;
+}
+
+.destination2 h2 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.destination2 .row {
+  display: flex;
+}
+
+.destination2 h2 span {
+  color: var(--primary);
+  margin: 10.5px;
+}
+
+.destination2 .row .content {
+  flex: 1 1 33rem;
+  padding: 0 1rem;
+}
+
+.destination2 .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0rem;
+  text-align: left;
+}
+
+.destination2 .row .content p {
+  font-size: large;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.destination3 {
+  padding: 8rem 15% 5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(crispin-jones-VGpiMzg45HE-unsplash.jpg);
+  mix-blend-mode: difference;
+}
+
+.destination3 h2 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.destination3 .row {
+  display: flex;
+}
+
+.destination3 h2 span {
+  color: var(--primary);
+  margin: 10.5px;
+}
+
+.destination3 .row .content {
+  flex: 1 1 33rem;
+  padding: 0 1rem;
+}
+
+.destination3 .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0rem;
+  text-align: left;
+}
+
+.destination3 .row .content p {
+  font-size: large;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.destination4 {
+  padding: 8rem 15% 5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(dimitry-b-LbrtLtsZXY4-unsplash.jpg);
+  mix-blend-mode: difference;
+}
+
+.destination4 h2 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.destination4 .row {
+  display: flex;
+}
+
+.destination4 h2 span {
+  color: var(--primary);
+  margin: 10.5px;
+}
+
+.destination4 .row .content {
+  flex: 1 1 33rem;
+  padding: 0 1rem;
+}
+
+.destination4 .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0rem;
+  text-align: left;
+}
+
+.destination4 .row .content p {
+  font-size: large;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* Destination Wisata Selesai */
+/* Contact Section */
+.contact-us {
+  padding: 8rem 15% 5rem;
+  background-image: url(mario-la-pergola-cn51tm7V0mU-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: 100px;
+}
+
+.contact-us h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.contact-us h2 span {
+  color: var(--primary);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.row .card {
+  display: flex;
+  flex-direction: row;
+}
+
+.row .card .gambar-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.row .card img {
+  width: 10%;
+  margin-right: 3rem;
+  margin-bottom: 1 5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.row .card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+
+.row .card .gambar2 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* wa */
+
+button {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10px;
+  border: 1px solid var(--bgmenu);
+  font-size: 15px;
+  padding: 8px;
+  background: var(--primary);
+  color: #eaeaea;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 4.5rem;
+  margin-top: 15px;
+}
+
+/* footer */
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--secondary);
+  color: #eaeaea;
+  font-size: medium;
+  font-weight: 400;
+  align-items: end;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1920px) {
+  html {
+    font-size: 75%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--bgmenu);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content {
+    padding: 0;
+  }
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+  .row .card img{
+    width: 120px;
+    height: 140px;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .row .card img{
+    width: 100px;
+  }
+}
+/* MobilePhone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .row .card img{
+    width: 100px;
+  }
+}
